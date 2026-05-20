@@ -1,66 +1,81 @@
-// ─── NAV scroll ──────────────────────────────────────────
-const nav = document.querySelector('.nav');
+// ─── Nav scroll ───────────────────────────────────────────
+const nav = document.getElementById('nav');
 if (nav) {
   window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 60);
-  });
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  }, { passive: true });
 }
 
-// ─── Hamburger menu ───────────────────────────────────────
-const hamburger = document.querySelector('.hamburger');
-const navLinks  = document.querySelector('.nav-links');
+// ─── Hamburger — se despliega desde la derecha ────────────
+const hamburger = document.getElementById('hamburger');
+const navLinks   = document.getElementById('navLinks');
+
 if (hamburger && navLinks) {
   hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-    const spans = hamburger.querySelectorAll('span');
-    spans[0].style.transform = navLinks.classList.contains('open') ? 'rotate(45deg) translate(5px,5px)' : '';
-    spans[1].style.opacity   = navLinks.classList.contains('open') ? '0' : '1';
-    spans[2].style.transform = navLinks.classList.contains('open') ? 'rotate(-45deg) translate(5px,-5px)' : '';
+    const open = navLinks.classList.toggle('open');
+    document.body.style.overflow = open ? 'hidden' : '';
+    const [s1, s2, s3] = hamburger.querySelectorAll('span');
+    if (open) {
+      s1.style.transform = 'rotate(45deg) translate(5px,5px)';
+      s2.style.opacity   = '0';
+      s3.style.transform = 'rotate(-45deg) translate(5px,-5px)';
+    } else {
+      s1.style.transform = s3.style.transform = '';
+      s2.style.opacity   = '1';
+    }
   });
+  // Cerrar al hacer clic en un enlace
   navLinks.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => navLinks.classList.remove('open'));
+    a.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      document.body.style.overflow = '';
+      hamburger.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = '1'; });
+    });
   });
 }
 
-// ─── Scroll reveal ────────────────────────────────────────
+// ─── Scroll reveal ─────────────────────────────────────────
 const revealEls = document.querySelectorAll('.reveal');
-if (revealEls.length) {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-  revealEls.forEach(el => observer.observe(el));
+if (revealEls.length && 'IntersectionObserver' in window) {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+  revealEls.forEach(el => obs.observe(el));
 }
 
-// ─── Active nav link ──────────────────────────────────────
-const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-document.querySelectorAll('.nav-links a').forEach(a => {
-  const href = a.getAttribute('href');
-  if (href === currentPage || (currentPage === '' && href === 'index.html')) {
-    a.classList.add('active');
-  }
-});
-
-// ─── Counter animation ────────────────────────────────────
-function animateCounter(el, target, duration = 1800) {
-  let start = 0;
-  const step = (timestamp) => {
-    if (!start) start = timestamp;
-    const progress = Math.min((timestamp - start) / duration, 1);
-    const ease = 1 - Math.pow(1 - progress, 3);
-    el.textContent = Math.floor(ease * target) + (el.dataset.suffix || '');
-    if (progress < 1) requestAnimationFrame(step);
+// ─── Counter animado ───────────────────────────────────────
+function animateCounter(el, target, duration) {
+  let start = null;
+  const suffix = el.dataset.suffix || '';
+  const step = ts => {
+    if (!start) start = ts;
+    const p = Math.min((ts - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.floor(ease * target) + suffix;
+    if (p < 1) requestAnimationFrame(step);
   };
   requestAnimationFrame(step);
 }
 const statEls = document.querySelectorAll('.stat-num[data-target]');
-if (statEls.length) {
-  const statsObserver = new IntersectionObserver((entries) => {
+if (statEls.length && 'IntersectionObserver' in window) {
+  const sObs = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) {
-        animateCounter(e.target, parseInt(e.target.dataset.target));
-        statsObserver.unobserve(e.target);
+        animateCounter(e.target, parseInt(e.target.dataset.target), 1600);
+        sObs.unobserve(e.target);
       }
     });
   }, { threshold: 0.5 });
-  statEls.forEach(el => statsObserver.observe(el));
+  statEls.forEach(el => sObs.observe(el));
 }
+
+// ─── Active nav link ───────────────────────────────────────
+const page = window.location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('.nav-links a').forEach(a => {
+  const href = a.getAttribute('href') || '';
+  if (href === page || (page === '' && href === 'index.html') || href.endsWith(page)) {
+    a.classList.add('active');
+  }
+});

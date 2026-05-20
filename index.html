@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Pantanos del Sur — Blog de pesca deportiva de tres hermanos de Rojales en los embalses del sur de la Comunitat Valenciana."/>
+  <meta name="description" content="Pantanos del Sur — Blog de pesca deportiva de tres hermanos de Rojales en los embalses de la Comunitat Valenciana."/>
   <title>Pantanos del Sur — Pasión · Consejos · Aventuras</title>
   <link rel="icon" type="image/png" href="img/logo_simplificado.png"/>
   <link rel="stylesheet" href="css/style.css"/>
@@ -15,13 +15,13 @@
   <div class="container">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
-        <img src="img/logo_simplificado.png" alt="Logo Pantanos del Sur"/>
+        <img src="img/logo_simplificado.png" alt="Pantanos del Sur"/>
         <div class="nav-logo-text">
           <span class="nav-logo-name">Pantanos del Sur</span>
           <span class="nav-logo-sub">Pasión · Consejos · Aventuras</span>
         </div>
       </a>
-      <ul class="nav-links">
+      <ul class="nav-links" id="navLinks">
         <li><a href="index.html" class="active">Inicio</a></li>
         <li><a href="pages/blog.html">Blog</a></li>
         <li><a href="pages/pantanos.html">Pantanos</a></li>
@@ -29,7 +29,7 @@
         <li><a href="pages/equipo.html">Equipo</a></li>
         <li><a href="pages/blog.html" class="btn btn-primary nav-cta">Leer blog</a></li>
       </ul>
-      <div class="hamburger" id="hamburger" aria-label="Menú">
+      <div class="hamburger" id="hamburger" aria-label="Abrir menú">
         <span></span><span></span><span></span>
       </div>
     </div>
@@ -41,27 +41,35 @@
   <div class="hero-bg"></div>
   <div class="hero-mist"></div>
   <div class="container">
-    <div class="hero-content">
-      <div class="hero-eyebrow">
-        <div class="hero-eyebrow-line"></div>
-        <span>Vega Baja · Comunitat Valenciana</span>
+    <div class="hero-inner">
+
+      <!-- Texto izquierda -->
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <div class="hero-eyebrow-line"></div>
+          <span>Vega Baja · Comunitat Valenciana</span>
+        </div>
+        <h1>
+          Donde el agua<br/>
+          <em>guarda secretos</em>
+        </h1>
+        <p class="hero-desc">
+          Somos dos hermanos obsesionados con la pesca y otro que aparece más por la caña.
+          Aquí compartimos nuestras aventuras, consejos y todo lo que vivimos en los pantanos del sur.
+        </p>
+        <p class="hero-quote">No siempre se pesca. Siempre se aprende.</p>
+        <div class="hero-actions">
+          <a href="pages/aventuras.html" class="btn btn-primary">Ver aventuras</a>
+          <a href="pages/blog.html" class="btn btn-outline">Leer el blog</a>
+        </div>
       </div>
-      <h1>
-        Donde el agua<br/>
-        <em>guarda secretos</em>
-      </h1>
-      <p class="hero-desc">
-        Somos tres hermanos del sur que cambiamos el sofá por el amanecer. Aquí contamos lo que pasa de verdad cuando te plantas delante de un pantano con una caña en la mano.
-      </p>
-      <p class="hero-quote">No siempre se pesca. Siempre se aprende.</p>
-      <div class="hero-actions">
-        <a href="pages/aventuras.html" class="btn btn-primary">Ver aventuras</a>
-        <a href="pages/blog.html" class="btn btn-outline">Leer el blog</a>
+
+      <!-- Logo derecha — sin fondo blanco -->
+      <div class="hero-logo">
+        <img src="img/logo_principal.png" alt="Pantanos del Sur"/>
       </div>
+
     </div>
-  </div>
-  <div class="hero-logo">
-    <img src="img/logo_principal.png" alt="Pantanos del Sur"/>
   </div>
   <div class="hero-scroll">
     <span>Bajar</span>
@@ -89,12 +97,12 @@
         <span class="stat-label">Salidas publicadas</span>
       </div>
       <div class="stat-item">
-        <span class="stat-num" data-target="5" data-suffix="">0</span>
+        <span class="stat-num" data-target="5">0</span>
         <span class="stat-label">Especies pescadas</span>
       </div>
       <div class="stat-item">
-        <span class="stat-num" data-target="3" data-suffix=" hermanos">0 hermanos</span>
-        <span class="stat-label">Rojales, Vega Baja</span>
+        <span class="stat-num" data-target="3">0</span>
+        <span class="stat-label">Hermanos de Rojales</span>
       </div>
     </div>
   </div>
@@ -103,7 +111,7 @@
 <!-- ══ AVENTURAS ═════════════════════════════════════════ -->
 <section class="section" style="background:#07101e;">
   <div class="container">
-    <div class="section-header reveal">
+    <div class="section-header reveal" style="margin-bottom:2.5rem;">
       <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
         <div>
           <p class="section-sub">Últimas salidas</p>
@@ -114,7 +122,7 @@
     </div>
     <div class="adventures-grid reveal">
       <a href="pages/aventuras.html" class="adv-card">
-        <img class="adv-card-img" src="https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=900&q=85" alt="Embalse de Escalona al amanecer"/>
+        <img class="adv-card-img" src="https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=900&q=85" alt="Escalona amanecer"/>
         <div class="adv-card-overlay">
           <span class="tag">Bass</span>
           <h3 class="adv-card-title">Escalona al amanecer — cuando todo encajó</h3>
@@ -123,7 +131,7 @@
         <div class="adv-card-arrow">→</div>
       </a>
       <a href="pages/aventuras.html" class="adv-card">
-        <img class="adv-card-img" src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=700&q=85" alt="Embalse de Beniarrés"/>
+        <img class="adv-card-img" src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=700&q=85" alt="Beniarrés"/>
         <div class="adv-card-overlay">
           <span class="tag">Carpa</span>
           <h3 class="adv-card-title">Beniarrés, la noche larga</h3>
@@ -132,7 +140,7 @@
         <div class="adv-card-arrow">→</div>
       </a>
       <a href="pages/aventuras.html" class="adv-card">
-        <img class="adv-card-img" src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=700&q=85" alt="Embalse en primavera"/>
+        <img class="adv-card-img" src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=700&q=85" alt="Amadorio"/>
         <div class="adv-card-overlay">
           <span class="tag">Bass · Lucio</span>
           <h3 class="adv-card-title">El Amadorio en primavera</h3>
@@ -152,7 +160,7 @@
 <!-- ══ BLOG ══════════════════════════════════════════════ -->
 <section class="section" style="background:#0a1220;">
   <div class="container">
-    <div class="section-header reveal">
+    <div class="section-header reveal" style="margin-bottom:2.5rem;">
       <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
         <div>
           <p class="section-sub">Del diario de campo</p>
@@ -175,7 +183,7 @@
         </div>
       </a>
       <a href="pages/blog.html" class="blog-card reveal reveal-delay-2">
-        <img class="blog-card-img" src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=600&q=85" alt="Señuelos para bass"/>
+        <img class="blog-card-img" src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=600&q=85" alt="Señuelos"/>
         <div class="blog-card-body">
           <span class="tag">Técnicas</span>
           <h3 class="blog-card-title">5 señuelos que no pueden faltar en tu caja</h3>
@@ -187,11 +195,11 @@
         </div>
       </a>
       <a href="pages/blog.html" class="blog-card reveal reveal-delay-3">
-        <img class="blog-card-img" src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600&q=85" alt="Amanecer en el pantano"/>
+        <img class="blog-card-img" src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600&q=85" alt="Amanecer"/>
         <div class="blog-card-body">
           <span class="tag">Aventura</span>
           <h3 class="blog-card-title">Por qué madrugar siempre merece la pena</h3>
-          <p class="blog-card-excerpt">Hay algo que pasa en los pantanos justo antes de que salga el sol que no se puede explicar bien con palabras, pero lo intentamos...</p>
+          <p class="blog-card-excerpt">Hay algo que pasa en los pantanos antes de que salga el sol que no se puede explicar bien con palabras, pero lo intentamos...</p>
           <div class="blog-card-footer">
             <span class="blog-card-date">7 May 2025</span>
             <span class="read-more">Leer →</span>
@@ -205,7 +213,7 @@
 <!-- ══ PANTANOS ═══════════════════════════════════════════ -->
 <section class="section" style="background:var(--dark);">
   <div class="container">
-    <div class="section-header reveal">
+    <div class="section-header reveal" style="margin-bottom:2.5rem;">
       <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
         <div>
           <p class="section-sub">Spots de la zona</p>
@@ -216,7 +224,7 @@
     </div>
     <div class="pantanos-grid">
       <div class="pantano-card reveal reveal-delay-1">
-        <img class="pantano-card-img" src="https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=700&q=80" alt="Embalse de Escalona"/>
+        <img class="pantano-card-img" src="https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=700&q=80" alt="Escalona"/>
         <div class="pantano-card-body">
           <h3 class="pantano-card-name">Embalse de Escalona</h3>
           <p class="pantano-card-loc">📍 Escalona, Valencia</p>
@@ -225,7 +233,7 @@
         </div>
       </div>
       <div class="pantano-card reveal reveal-delay-2">
-        <img class="pantano-card-img" src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=700&q=80" alt="Embalse de Beniarrés"/>
+        <img class="pantano-card-img" src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=700&q=80" alt="Beniarrés"/>
         <div class="pantano-card-body">
           <h3 class="pantano-card-name">Embalse de Beniarrés</h3>
           <p class="pantano-card-loc">📍 Beniarrés, Alicante</p>
@@ -234,7 +242,7 @@
         </div>
       </div>
       <div class="pantano-card reveal reveal-delay-1">
-        <img class="pantano-card-img" src="https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?w=700&q=80" alt="Embalse de Amadorio"/>
+        <img class="pantano-card-img" src="https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?w=700&q=80" alt="Amadorio"/>
         <div class="pantano-card-body">
           <h3 class="pantano-card-name">Embalse de Amadorio</h3>
           <p class="pantano-card-loc">📍 Villajoyosa, Alicante</p>
@@ -243,7 +251,7 @@
         </div>
       </div>
       <div class="pantano-card reveal reveal-delay-2">
-        <img class="pantano-card-img" src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=700&q=80" alt="Embalse de Tous"/>
+        <img class="pantano-card-img" src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=700&q=80" alt="Tous"/>
         <div class="pantano-card-body">
           <h3 class="pantano-card-name">Embalse de Tous</h3>
           <p class="pantano-card-loc">📍 Tous, Valencia</p>
@@ -255,12 +263,12 @@
   </div>
 </section>
 
-<!-- ══ ABOUT ══════════════════════════════════════════════ -->
+<!-- ══ QUIÉNES SOMOS ══════════════════════════════════════ -->
 <section class="section about-bg">
   <div class="container">
     <div class="about-inner">
       <div class="about-img-wrap reveal">
-        <img class="about-img" src="https://images.unsplash.com/photo-1533240332313-0db49b459ad6?w=700&q=85" alt="Tres hermanos pescando al amanecer"/>
+        <img class="about-img" src="https://images.unsplash.com/photo-1533240332313-0db49b459ad6?w=700&q=85" alt="Tres hermanos en el pantano"/>
         <div class="about-img-badge">
           <strong>RC</strong>
           <span>Desde Rojales</span>
@@ -276,7 +284,7 @@
           Las primeras cañas las mojamos en el Mediterráneo. <em>Guardamar, Torrevieja, el mar como primer maestro.</em> Pero con el tiempo el horizonte se fue abriendo hacia el interior: los embalses, la montaña, el agua verde de los pantanos valencianos.
         </p>
         <p>
-          Escalona, Beniarrés, Amadorio, Tous... cada uno nos enseñó algo distinto. <strong>Este blog es nuestro diario de exploración.</strong> Tres hermanos, muchas madrugadas y la convicción de que la mejor parte de pescar nunca fue la captura.
+          Escalona, Beniarrés, Amadorio, Tous... cada uno nos enseñó algo distinto. <strong>Este blog es nuestro diario de exploración.</strong> Dos obsesionados con la pesca y otro que aparece más por la caña.
         </p>
         <a href="pages/aventuras.html" class="btn btn-primary" style="margin-top:.5rem;">Conocer nuestras aventuras</a>
       </div>
@@ -284,13 +292,35 @@
   </div>
 </section>
 
-<!-- ══ EQUIPO PREVIEW ════════════════════════════════════ -->
+<!-- ══ ÚLTIMA SALIDA ══════════════════════════════════════ -->
+<section class="section" style="background:#07101e;">
+  <div class="container">
+    <div class="section-header reveal" style="margin-bottom:2.5rem;">
+      <p class="section-sub">Lo más reciente</p>
+      <h2 class="section-title">Última <span>salida</span></h2>
+    </div>
+    <div class="ultima-salida reveal">
+      <div class="ultima-salida-img">
+        <img src="https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=85" alt="Embalse de Tous — Mayo 2026"/>
+      </div>
+      <div class="ultima-salida-body">
+        <p class="section-sub">Mayo 2026 · Embalse de Tous</p>
+        <h3>Embalse de Tous — Mayo 2026</h3>
+        <p class="resumen">3 picadas, 1 bass, viento infernal. Mañana fría, agua verde y una batalla que lo compensó todo.</p>
+        <p>Llegamos al Tous con el sol todavía escondido detrás de la sierra. El agua estaba verde, limpia, y el viento ya avisaba de que no iba a ser fácil. Tres horas buscando la posición correcta, dos piques fallados y uno que al final entró bien. Así se viven los pantanos.</p>
+        <a href="pages/aventuras.html" class="btn btn-primary">Ver crónica completa</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ EQUIPO ═════════════════════════════════════════════ -->
 <section class="section" style="background:#060d18;">
   <div class="container">
     <div class="section-header reveal" style="text-align:center;margin-bottom:2.5rem;">
       <p class="section-sub">Lo que llevamos al agua</p>
       <h2 class="section-title" style="text-align:center;">Material que <span>usamos de verdad</span></h2>
-      <p style="font-family:var(--font-serif);color:var(--muted);margin-top:.8rem;font-style:italic;font-size:.95rem;">Sin patrocinios inventados. Solo lo que cabe en nuestra mochila.</p>
+      <p style="font-family:var(--font-serif);color:var(--muted);margin-top:.8rem;font-style:italic;font-size:.92rem;">Sin patrocinios inventados. Solo lo que cabe en nuestra mochila.</p>
     </div>
     <div class="equipo-grid">
       <div class="equipo-card reveal reveal-delay-1">
@@ -309,7 +339,7 @@
         <p>Desde el chaleco hasta la linterna frontal. Todo lo que llevas encima cuando entras al monte antes del amanecer.</p>
       </div>
     </div>
-    <div style="text-align:center;margin-top:2.5rem;" class="reveal">
+    <div style="text-align:center;margin-top:2rem;" class="reveal">
       <a href="pages/equipo.html" class="btn btn-primary">Ver todo el equipo</a>
     </div>
   </div>
@@ -323,15 +353,16 @@
 <!-- ══ FOOTER ════════════════════════════════════════════ -->
 <footer class="footer">
   <div class="container">
-    <div class="footer-grid">
+    <div class="footer-inner">
       <div class="footer-brand">
-        <img src="img/logo_horizontal.png" alt="Pantanos del Sur" class="footer-brand-logo"/>
+        <img src="img/logo_horizontal.png" alt="Pantanos del Sur" class="footer-logo"/>
         <p>Blog de pesca deportiva de tres hermanos de Rojales en los embalses de la Comunitat Valenciana. Bass, carpas, aventuras y mucha honestidad.</p>
         <p class="footer-brand-quote">La mejor parte nunca fue la captura.</p>
       </div>
       <div class="footer-col">
         <h4>Explorar</h4>
         <ul>
+          <li><a href="index.html">Inicio</a></li>
           <li><a href="pages/blog.html">Blog</a></li>
           <li><a href="pages/pantanos.html">Pantanos</a></li>
           <li><a href="pages/aventuras.html">Aventuras</a></li>
@@ -340,12 +371,14 @@
       </div>
       <div class="footer-col">
         <h4>Contacto</h4>
-        <ul>
-          <li><a href="mailto:info@galeriatorreblanca.com">info@galeriatorreblanca.com</a></li>
-          <li><a href="pages/pantanos.html">Escalona</a></li>
-          <li><a href="pages/pantanos.html">Beniarrés</a></li>
-          <li><a href="pages/pantanos.html">Amadorio · Tous</a></li>
-        </ul>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">✉</span>
+          <a href="mailto:info@galeriatorreblanca.com">info@galeriatorreblanca.com</a>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">📍</span>
+          <span>Rojales, Vega Baja del Segura</span>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">
