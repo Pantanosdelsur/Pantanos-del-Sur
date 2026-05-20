@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pantanos — Pantanos del Sur</title>
+  <link rel="icon" type="image/png" href="../img/logo_simplificado.png"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    .pantano-ficha {
+      background: var(--navy);
+      border: 1px solid rgba(74,122,181,.18);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-bottom: 2rem;
+      transition: border-color .3s;
+    }
+    .pantano-ficha:hover { border-color: rgba(200,168,75,.35); }
+    .pantano-ficha-img { width:100%; height:320px; object-fit:cover; filter:brightness(.7) saturate(1.2); }
+    .pantano-ficha-body { padding: 2.5rem; }
+    .pantano-ficha-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:1.5rem; margin-top:1.5rem; }
+    .ficha-block h4 {
+      font-family:var(--font-display);
+      font-size:.78rem;
+      font-weight:600;
+      letter-spacing:.15em;
+      text-transform:uppercase;
+      color:var(--accent);
+      margin-bottom:.6rem;
+    }
+    .ficha-block p { font-size:.9rem; color:rgba(255,255,255,.75); font-family:var(--font-serif); line-height:1.65; }
+    @media(max-width:768px){ .pantano-ficha-grid{grid-template-columns:1fr;} .pantano-ficha-img{height:220px;} }
+  </style>
+</head>
+<body>
+<nav class="nav scrolled" id="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo"><img src="../img/logo_simplificado.png" alt="Logo"/><div class="nav-logo-text"><span class="nav-logo-name">Pantanos del Sur</span><span class="nav-logo-sub">Pasión · Consejos · Aventuras</span></div></a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="pantanos.html" class="active">Pantanos</a></li>
+        <li><a href="aventuras.html">Aventuras</a></li>
+        <li><a href="equipo.html">Equipo</a></li>
+        <li><a href="blog.html" class="btn btn-primary nav-cta">Leer blog</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero" style="background-image:linear-gradient(to bottom,rgba(8,15,30,.5),rgba(8,15,30,.92)),url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1400&q=80');background-size:cover;background-position:center;">
+  <div class="container">
+    <div class="breadcrumb"><a href="../index.html">Inicio</a><span class="breadcrumb-sep">/</span><span>Pantanos</span></div>
+    <h1>Los <span style="color:var(--accent)">Pantanos</span></h1>
+    <p>Fichas reales de los embalses que frecuentamos. Ubicación, especies, accesos y consejos honestos.</p>
+  </div>
+</section>
+
+<section class="section" style="background:var(--dark);">
+  <div class="container">
+
+    <div class="pantano-ficha reveal">
+      <img class="pantano-ficha-img" src="https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=1200&q=80" alt="Embalse de Escalona"/>
+      <div class="pantano-ficha-body">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1rem;">
+          <div>
+            <span class="tag" style="margin-bottom:.5rem;display:inline-block;">Favorito RC</span>
+            <h2 class="section-title">Embalse de <span>Escalona</span></h2>
+          </div>
+          <div class="pantano-dif" style="flex-direction:column;align-items:flex-end;gap:.4rem;">
+            <span style="font-size:.75rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;">Dificultad</span>
+            <div class="dif-dots">
+              <div class="dif-dot active"></div><div class="dif-dot active"></div><div class="dif-dot active"></div><div class="dif-dot"></div><div class="dif-dot"></div>
+            </div>
+            <span style="font-size:.8rem;color:var(--muted);">Media</span>
+          </div>
+        </div>
+        <div class="pantano-species">
+          <span class="species-tag">Black Bass</span>
+          <span class="species-tag">Carpa</span>
+          <span class="species-tag">Lucio</span>
+          <span class="species-tag">Barbo</span>
+        </div>
+        <div class="pantano-ficha-grid">
+          <div class="ficha-block">
+            <h4>Ubicación</h4>
+            <p>Escalona, Valencia. A unos 70 km de Valencia capital. Acceso por la CV-405. Hay zonas de orilla accesibles sin barca en el margen sur.</p>
+          </div>
+          <div class="ficha-block">
+            <h4>Mejor época</h4>
+            <p>Primavera (abril-junio) para bass en topwater. Otoño para carpas de gran tamaño. En verano el nivel baja y hay que buscar las zonas más profundas.</p>
+          </div>
+          <div class="ficha-block">
+            <h4>Consejos</h4>
+            <p>El bass se concentra cerca de los árboles sumergidos que quedan a la vista cuando baja el nivel. Los señuelos de superficie al amanecer son letales en mayo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pantano-ficha reveal">
+      <img class="pantano-ficha-img" src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=1200&q=80" alt="Embalse de Beniarrés"/>
+      <div class="pantano-ficha-body">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1rem;">
+          <div>
+            <h2 class="section-title">Embalse de <span>Beniarrés</span></h2>
+          </div>
+          <div class="pantano-dif" style="flex-direction:column;align-items:flex-end;gap:.4rem;">
+            <span style="font-size:.75rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;">Dificultad</span>
+            <div class="dif-dots">
+              <div class="dif-dot active"></div><div class="dif-dot active"></div><div class="dif-dot"></div><div class="dif-dot"></div><div class="dif-dot"></div>
+            </div>
+            <span style="font-size:.8rem;color:var(--muted);">Fácil</span>
+          </div>
+        </div>
+        <div class="pantano-species">
+          <span class="species-tag">Carpa</span>
+          <span class="species-tag">Black Bass</span>
+          <span class="species-tag">Barbo</span>
+        </div>
+        <div class="pantano-ficha-grid">
+          <div class="ficha-block">
+            <h4>Ubicación</h4>
+            <p>Beniarrés, comarca del Comtat (Alicante). A unos 85 km de Alicante. Acceso cómodo por la CV-700. Varias zonas de orilla bien habilitadas.</p>
+          </div>
+          <div class="ficha-block">
+            <h4>Mejor época</h4>
+            <p>Todo el año para carpas. El nivel suele mantenerse bastante estable, lo que lo hace predecible. Bass más activo en primavera y principio de otoño.</p>
+          </div>
+          <div class="ficha-block">
+            <h4>Consejos</h4>
+            <p>Es un embalse tranquilo, sin mucha presión de pesca. Las carpas están acostumbradas a los cebos naturales. Los montajes con maíz y boilies de fruta funcionan bien.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pantano-ficha reveal">
+      <img class="pantano-ficha-img" src="https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?w=1200&q=80" alt="Embalse de Amadorio"/>
+      <div class="pantano-ficha-body">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1rem;">
+          <div>
+            <span class="tag" style="margin-bottom:.5rem;display:inline-block;">Difícil pero brutal</span>
+            <h2 class="section-title">Embalse de <span>Amadorio</span></h2>
+          </div>
+          <div class="pantano-dif" style="flex-direction:column;align-items:flex-end;gap:.4rem;">
+            <span style="font-size:.75rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;">Dificultad</span>
+            <div class="dif-dots">
+              <div class="dif-dot active"></div><div class="dif-dot active"></div><div class="dif-dot active"></div><div class="dif-dot active"></div><div class="dif-dot"></div>
+            </div>
+            <span style="font-size:.8rem;color:var(--muted);">Alta</span>
+          </div>
+        </div>
+        <div class="pantano-species">
+          <span class="species-tag">Black Bass</span>
+          <span class="species-tag">Perca</span>
+        </div>
+        <div class="pantano-ficha-grid">
+          <div class="ficha-block">
+            <h4>Ubicación</h4>
+            <p>Villajoyosa, Alicante. Muy cerca de la costa. El acceso a la orilla es complicado por el terreno rocoso — hay que ir preparado para caminar.</p>
+          </div>
+          <div class="ficha-block">
+            <h4>Mejor época</h4>
+            <p>Primavera temprana (marzo-abril) antes de que suba el turismo costero. El agua suele estar clara y el bass muy activo después del invierno.</p>
+          </div>
+          <div class="ficha-block">
+            <h4>Consejos</h4>
+            <p>Difícil pero muy gratificante. Los bass de aquí son grandes y pelean fuerte. Necesitas equipo resistente y paciencia. No es para la primera salida.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="../img/logo_horizontal.png" alt="Pantanos del Sur" class="footer-brand-logo"/><p>Blog de pesca deportiva en los embalses de la Comunitat Valenciana.</p></div>
+      <div class="footer-col"><h4>Explorar</h4><ul><li><a href="blog.html">Blog</a></li><li><a href="pantanos.html">Pantanos</a></li><li><a href="aventuras.html">Aventuras</a></li><li><a href="equipo.html">Equipo</a></li></ul></div>
+      <div class="footer-col"><h4>Pantanos</h4><ul><li><a href="#">Escalona</a></li><li><a href="#">Beniarrés</a></li><li><a href="#">Amadorio</a></li><li><a href="#">Tous</a></li></ul></div>
+      <div class="footer-col"><h4>Contacto</h4><ul><li><a href="mailto:info@galeriatorreblanca.com">info@galeriatorreblanca.com</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 <span>Pantanos del Sur</span> — Hecho con pasión desde Rojales</p></div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

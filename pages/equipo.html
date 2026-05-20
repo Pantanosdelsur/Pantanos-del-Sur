@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Equipo — Pantanos del Sur</title>
+  <link rel="icon" type="image/png" href="../img/logo_simplificado.png"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    .equipo-full-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+    .equipo-full-card {
+      background:var(--navy);
+      border:1px solid rgba(255,255,255,.06);
+      border-radius:var(--radius-lg);
+      overflow:hidden;
+      transition:all .3s ease;
+    }
+    .equipo-full-card:hover { border-color:rgba(200,168,75,.3); transform:translateY(-5px); box-shadow:var(--shadow-lg); }
+    .equipo-full-card-img { width:100%; height:200px; object-fit:cover; filter:brightness(.75) saturate(1.1); transition:filter .3s; }
+    .equipo-full-card:hover .equipo-full-card-img { filter:brightness(.9) saturate(1.2); }
+    .equipo-full-card-body { padding:1.5rem; }
+    .equipo-full-card-body h3 { font-family:var(--font-display); font-size:1.1rem; font-weight:600; text-transform:uppercase; letter-spacing:.04em; margin:.5rem 0 .6rem; }
+    .equipo-full-card-body p { font-size:.88rem; color:var(--muted); line-height:1.65; font-family:var(--font-serif); }
+    .precio { font-family:var(--font-display); font-size:1.2rem; font-weight:700; color:var(--accent); margin-top:.8rem; }
+    @media(max-width:768px){ .equipo-full-grid{grid-template-columns:1fr;} }
+    @media(max-width:1024px){ .equipo-full-grid{grid-template-columns:repeat(2,1fr);} }
+  </style>
+</head>
+<body>
+<nav class="nav scrolled" id="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo"><img src="../img/logo_simplificado.png" alt="Logo"/><div class="nav-logo-text"><span class="nav-logo-name">Pantanos del Sur</span><span class="nav-logo-sub">Pasión · Consejos · Aventuras</span></div></a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="pantanos.html">Pantanos</a></li>
+        <li><a href="aventuras.html">Aventuras</a></li>
+        <li><a href="equipo.html" class="active">Equipo</a></li>
+        <li><a href="blog.html" class="btn btn-primary nav-cta">Leer blog</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero" style="background-image:linear-gradient(to bottom,rgba(8,15,30,.5),rgba(8,15,30,.92)),url('https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?w=1400&q=80');background-size:cover;background-position:center;">
+  <div class="container">
+    <div class="breadcrumb"><a href="../index.html">Inicio</a><span class="breadcrumb-sep">/</span><span>Equipo</span></div>
+    <h1>Nuestro <span style="color:var(--accent)">Equipo</span></h1>
+    <p>Lo que llevamos al agua. Sin patrocinios inventados, sin humo. Solo lo que usamos de verdad.</p>
+  </div>
+</section>
+
+<section class="section" style="background:var(--dark);">
+  <div class="container">
+    <div class="section-header reveal" style="margin-bottom:3rem;">
+      <p class="section-sub">Cañas y carretes</p>
+      <h2 class="section-title">Spinning y <span>Baitcasting</span></h2>
+    </div>
+    <div class="equipo-full-grid">
+      <div class="equipo-full-card reveal">
+        <img class="equipo-full-card-img" src="https://images.unsplash.com/photo-1563299796-b729d5f59e36?w=600&q=80" alt="Caña spinning"/>
+        <div class="equipo-full-card-body">
+          <span class="tag">Spinning</span>
+          <h3>Caña spinning ligera 6'6"</h3>
+          <p>La que más usamos para bass con señuelos blandos y jig heads. Ligera, sensible y con buena progresión en la acción. La llevamos a casi todas las salidas.</p>
+          <p class="precio">~120€</p>
+        </div>
+      </div>
+      <div class="equipo-full-card reveal reveal-delay-1">
+        <img class="equipo-full-card-img" src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=600&q=80" alt="Baitcasting"/>
+        <div class="equipo-full-card-body">
+          <span class="tag">Baitcasting</span>
+          <h3>Setup baitcasting para crankbaits</h3>
+          <p>Para lanzar crankbaits y spinnerbaits con precisión. Tardamos en cogerle el punto al carrete, pero merece la pena para determinadas técnicas.</p>
+          <p class="precio">~200€</p>
+        </div>
+      </div>
+      <div class="equipo-full-card reveal reveal-delay-2">
+        <img class="equipo-full-card-img" src="https://images.unsplash.com/photo-1533240332313-0db49b459ad6?w=600&q=80" alt="Feeder"/>
+        <div class="equipo-full-card-body">
+          <span class="tag">Feeder · Carpa</span>
+          <h3>Equipo feeder para carpas</h3>
+          <p>Lo que usamos en las sesiones nocturnas de carpa. Cañas de 3.5-4m con buena potencia de lanzamiento para boilies y montajes tipo hair rig.</p>
+          <p class="precio">~180€</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header reveal" style="margin:4rem 0 2.5rem;">
+      <p class="section-sub">Señuelos</p>
+      <h2 class="section-title">Lo que <span>funciona</span></h2>
+    </div>
+    <div class="equipo-full-grid">
+      <div class="equipo-full-card reveal">
+        <img class="equipo-full-card-img" src="https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?w=600&q=80" alt="Soft plastics"/>
+        <div class="equipo-full-card-body">
+          <span class="tag">Soft plastics</span>
+          <h3>Señuelos blandos</h3>
+          <p>Los Texas Rig y Drop Shot son nuestros comodines. En los embalses del sur, las Gary Yamamoto Senko y similares hacen estragos cuando el bass está pasivo.</p>
+        </div>
+      </div>
+      <div class="equipo-full-card reveal reveal-delay-1">
+        <img class="equipo-full-card-img" src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600&q=80" alt="Topwater"/>
+        <div class="equipo-full-card-body">
+          <span class="tag">Topwater</span>
+          <h3>Señuelos de superficie</h3>
+          <p>Los poppers y stickbaits en superficie son espectaculares en primavera. Ver un bass saltar a por el señuelo no tiene precio. Los Deps Buzz Jet y similares son nuestros favoritos.</p>
+        </div>
+      </div>
+      <div class="equipo-full-card reveal reveal-delay-2">
+        <img class="equipo-full-card-img" src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=600&q=80" alt="Crankbaits"/>
+        <div class="equipo-full-card-body">
+          <span class="tag">Crankbaits</span>
+          <h3>Crankbaits para explorar</h3>
+          <p>Para cubrir agua rápido y encontrar dónde están los peces. En embalses con mucha profundidad, los modelos que llegan a 4-6 metros son muy efectivos.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:4rem; padding:2.5rem; background:var(--navy); border-radius:var(--radius-lg); border:1px solid rgba(200,168,75,.2);" class="reveal">
+      <p class="section-sub">Aviso importante</p>
+      <h3 class="section-title" style="font-size:1.6rem; margin-bottom:1rem;">Sobre <span>los afiliados</span></h3>
+      <p style="font-family:var(--font-serif); color:rgba(255,255,255,.78); font-size:1rem; line-height:1.8; max-width:720px;">
+        Algunos enlaces de esta sección pueden ser enlaces de afiliado. Eso significa que si compras algo a través de ellos, nosotros recibimos una pequeña comisión sin coste adicional para ti. <strong style="color:var(--accent);">Pero nunca recomendamos algo que no hayamos usado o que no creamos que merece la pena.</strong> La honestidad es lo único que tenemos.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="../img/logo_horizontal.png" alt="Pantanos del Sur" class="footer-brand-logo"/><p>Blog de pesca deportiva en los embalses de la Comunitat Valenciana.</p></div>
+      <div class="footer-col"><h4>Explorar</h4><ul><li><a href="blog.html">Blog</a></li><li><a href="pantanos.html">Pantanos</a></li><li><a href="aventuras.html">Aventuras</a></li><li><a href="equipo.html">Equipo</a></li></ul></div>
+      <div class="footer-col"><h4>Pantanos</h4><ul><li><a href="pantanos.html">Escalona</a></li><li><a href="pantanos.html">Beniarrés</a></li><li><a href="pantanos.html">Amadorio</a></li></ul></div>
+      <div class="footer-col"><h4>Contacto</h4><ul><li><a href="mailto:info@galeriatorreblanca.com">info@galeriatorreblanca.com</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 <span>Pantanos del Sur</span> — Hecho con pasión desde Rojales</p></div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>
