@@ -75,26 +75,26 @@ a { color:inherit; text-decoration:none; }
 /* Fondo real del pantano */
 .hero-bg {
   position:absolute; inset:0;
-  background:url('../img/pantanos_background.jpg') center 55%/cover no-repeat;
+  background:url('../img/fondo_hero.png') center 45%/cover no-repeat;
 }
-/* Overlay cinematográfico — menos azul, más natural */
+/* Overlay cinematográfico — suave para dejar ver el embalse */
 .hero-bg::before {
   content:'';
   position:absolute; inset:0;
   background: linear-gradient(
     90deg,
-    rgba(6,14,26,.92) 0%,
-    rgba(6,14,26,.78) 45%,
-    rgba(6,14,26,.35) 70%,
-    rgba(6,14,26,.1) 100%
+    rgba(6,14,26,.88) 0%,
+    rgba(6,14,26,.72) 42%,
+    rgba(6,14,26,.25) 68%,
+    rgba(6,14,26,.08) 100%
   );
 }
 .hero-bg::after {
   content:'';
   position:absolute; inset:0;
   background:
-    linear-gradient(to bottom, rgba(6,14,26,.25) 0%, transparent 30%, rgba(6,14,26,.55) 80%, rgba(6,14,26,1) 100%),
-    radial-gradient(ellipse at 65% 50%, rgba(212,175,55,.06) 0%, transparent 55%);
+    linear-gradient(to bottom, rgba(6,14,26,.2) 0%, transparent 25%, rgba(6,14,26,.45) 78%, rgba(6,14,26,1) 100%),
+    radial-gradient(ellipse at 62% 48%, rgba(212,175,55,.04) 0%, transparent 50%);
 }
 .hero-mist { position:absolute; bottom:0; left:0; right:0; height:30%; background:linear-gradient(to top, rgba(6,14,26,1) 0%, transparent 100%); z-index:1; }
 
@@ -152,6 +152,8 @@ a { color:inherit; text-decoration:none; }
 .hero-actions { display:flex; gap:1rem; flex-wrap:wrap; opacity:0; animation:fadeUp .8s ease .8s forwards; }
 
 /* Logo hero — sin fondo blanco, integrado */
+/* Logo hero — pantanos_blanco.png: fondo negro, logo blanco
+   mix-blend-mode:screen hace negro=transparente, blanco=visible */
 .hero-logo {
   flex-shrink:0;
   width:clamp(220px,28vw,340px);
@@ -159,13 +161,16 @@ a { color:inherit; text-decoration:none; }
   animation:fadeIn 1.2s ease .9s forwards;
   position:relative;
   z-index:2;
+  background:none !important;
+  border:none !important;
+  box-shadow:none !important;
 }
 .hero-logo img {
   width:100%;
   height:auto;
-  /* Eliminar el fondo blanco del PNG usando mix-blend-mode */
+  display:block;
   mix-blend-mode:screen;
-  filter:brightness(1.05) contrast(1.05) drop-shadow(0 0 30px rgba(212,175,55,.15)) drop-shadow(0 4px 20px rgba(0,0,0,.6));
+  filter:drop-shadow(0 0 20px rgba(212,175,55,.1));
 }
 
 .hero-scroll { position:absolute; bottom:2rem; left:50%; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:.5rem; opacity:.45; animation:bounce 2.5s ease infinite; z-index:2; }
@@ -279,14 +284,16 @@ a { color:inherit; text-decoration:none; }
 .footer { background:var(--dark); border-top:1px solid rgba(255,255,255,.05); padding:3.5rem 0 1.8rem; }
 .footer-inner { display:grid; grid-template-columns:1.8fr 1fr 1fr; gap:2.5rem; margin-bottom:2.5rem; padding-bottom:2.5rem; border-bottom:1px solid rgba(255,255,255,.05); }
 
-/* Logo footer visible sobre fondo oscuro */
+/* Logo footer — logo_horizontal_blanco.png: fondo negro, logo blanco
+   screen elimina el negro, logo queda visible sobre fondo oscuro */
 .footer-logo {
-  height:52px;
+  height:56px;
   width:auto;
   margin-bottom:1.2rem;
-  /* PNG con fondo blanco: invert para hacerlo blanco sobre oscuro */
-  filter:brightness(0) invert(1);
-  opacity:.82;
+  display:block;
+  mix-blend-mode:screen;
+  filter:drop-shadow(0 1px 8px rgba(0,0,0,.3));
+  opacity:.95;
 }
 .footer-brand p { font-family:var(--font-serif); font-size:.88rem; color:var(--muted); line-height:1.75; max-width:270px; margin-bottom:.7rem; }
 .footer-brand-quote { font-family:var(--font-serif); font-style:italic; font-size:.84rem; color:var(--accent) !important; opacity:.9; }
